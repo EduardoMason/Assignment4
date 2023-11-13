@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  
+<title>Rock,Paper,scissors</title>
+
+<h1><b>Rock, Paper, Scissors</b></h1>
+
+
+<style>
+
+  .button1 {
+  font-size: 20px;
+    
+
+  }  
+
+  .button2 {
+    font-size: 20px;
+  } 
+
+  .button3 {
+font-size: 20px;
+
+  }
+
+  .myDiv {
+    border-radius: 30px;
+    border: 4px solid black
+       
+    }
+
+  .paper.jpg {
+      width: 30px;
+  }
+
+  .QuestionMark.jpg {
+    width: 12px;
+  }
+
+  .Rock.jpg {
+width: 6px;
+
+  }
+
+  .Scissors.jpg {
+    width: 16px;
+  }
+
+  p {
+    border: 10px;
+    font-size: 30px;
+  }
+
+  .myDiv2 {
+    border-radius: 30px;
+    border: 4px solid black;
+  }
+</style>
+
+<script>
+
+var winCondition = 0;
+var loseCondition = 0;
+var tieCondition = 0;
+var a = 0;
+function showImage() {
+    document.getElementById("userPicture").src= "QuestionMark.jpg";
+}
+
+function rockImage() {
+  document.getElementById("userPicture").src= "Rock.jpg";
+  a = Math.floor(Math.random() * 4);
+  if (a == 1) {
+        document.getElementById("computerPicture").src= "Rock.jpg";
+  }
+
+  if (a==2) {
+    document.getElementById("computerPcture").src= "paper.jpg";
+  }
+
+  if (a==3) {
+    document.getElementById("computerPicture").src= "Scissors.jpg";
+  }
+}
+
+function paperImage() {
+  document.getElementById("userPicture").src= "paper.jpg";
+ a = Math.floor(Math.random() * 4);
+
+ if (a == 1) {
+        document.getElementById("computerPicture").src= "Rock.jpg";
+  }
+
+  if (a==2) {
+    document.getElementById("computerPcture").src= "paper.jpg";
+  }
+
+  if (a==3) {
+    document.getElementById("computerPicture").src= "Scissors.jpg";
+  }
+}
+
+function scissorImage() {
+  document.getElementById("userPicture").src= "Scissors.jpg";
+  a = Math.floor(Math.random() * 4);
+
+  if (a == 1) {
+        document.getElementById("computerPicture").src= "Rock.jpg";
+  }
+
+  if (a==2) {
+    document.getElementById("computerPicture").src= "paper.jpg";
+  }
+
+  if (a==3) {
+    document.getElementById("computerPicture").src= "Scissors.jpg";
+  }
+}
+
+function statusCondtion() {
+  document.getElementById("userResults").innerHTML= 0;
+}
+
+function winCondition() {
+  document.getElementById("userResults").innerHTML= winCondition;
+}
+
+function tieCondition() {
+  document.getElementById("userResults").innerHTML= tieCondition;
+}
+
+function loseCondition() {
+  document.getElementById("userResults").innerHTML= loseCondition;
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<button onclick = "rockImage()">Rock</button>
+
+<button onclick = "paperImage()">Paper</button>
+
+<button onclick = "scissorImage()">Scissors</button>
+
+<div class="myDiv"><img src="QuestionMark.jpg" id ="userPicture"></div>
+
+<p id = "userResults">Test</p>
+</body>
+
+<div class="myDiv2"><img src="QuestionMark.jpg" id ="computerPicture"></div>
+
+
+
+</html>
